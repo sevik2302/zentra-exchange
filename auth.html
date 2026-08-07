@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вход / Регистрация — ZENTRA</title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav>
+  <a href="/" class="logo"><div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 14l6-6 4 4 6-8"/></svg></div>ZENTRA</a>
+</nav>
+
+<div class="auth-center">
+  <div class="auth-card">
+    <h2 id="authTitle">Вход</h2>
+    <div class="sub" id="authSub">Рады видеть вас снова</div>
+
+    <div class="auth-error" id="authError"></div>
+
+    <form id="authForm">
+      <div class="field">
+        <label>Логин</label>
+        <input type="text" id="username" name="username" placeholder="username" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label>Пароль</label>
+        <input type="password" id="password" name="password" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <div class="field" id="confirmField" style="display:none;">
+        <label>Повторите пароль</label>
+        <input type="password" id="confirm" name="confirm" placeholder="••••••••">
+      </div>
+      <button type="submit" class="btn-amber full" id="submitBtn">Войти</button>
+    </form>
+
+    <div class="auth-switch" id="authSwitch">
+      Нет аккаунта? <a href="#" id="switchLink">Создать</a>
+    </div>
+  </div>
+</div>
+
+<script src="/js/auth.js"></script>
+</body>
+</html>

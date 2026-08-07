@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZENTRA — Торгуй быстрее рынка</title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<nav id="nav">
+  <div class="logo"><div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 14l6-6 4 4 6-8"/></svg></div>ZENTRA</div>
+  <div class="nav-mid">
+    <a href="#markets">Рынки</a>
+    <a href="#features">Возможности</a>
+  </div>
+  <div class="nav-right">
+    <a href="/auth.html" class="nav-login">Войти</a>
+    <a href="/auth.html?mode=signup" class="btn-amber">Регистрация</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div>
+    <div class="badge reveal in"><span class="d"></span>Работает в 190+ странах</div>
+    <h1 class="reveal in">Торгуй быстрее рынка <span class="amb">на ZENTRA</span></h1>
+    <p class="reveal in">Спот и деривативы, глубокая ликвидность и исполнение за миллисекунды — в одном аккаунте, без лишних шагов.</p>
+    <div class="hero-ctas reveal in">
+      <a href="/auth.html?mode=signup" class="btn-amber lg">Начать торговлю</a>
+      <a href="#markets" class="btn-ghost lg">Смотреть рынки</a>
+    </div>
+    <div class="hero-trust reveal in">
+      <div class="trust-item"><div class="n">$38B+</div><div class="l">Суточный объём</div></div>
+      <div class="trust-item"><div class="n">42M+</div><div class="l">Пользователей</div></div>
+      <div class="trust-item"><div class="n">0.02%</div><div class="l">Комиссия мейкера</div></div>
+    </div>
+  </div>
+
+  <div class="trade-mock reveal in">
+    <div class="tm-head">
+      <div class="tm-pair">
+        <div class="coin">₿</div>
+        <div><div class="name">BTC/USDT</div><div class="sub mono">Бессрочный</div></div>
+      </div>
+      <div class="tm-price">
+        <div class="p mono" id="tmPrice">96,412.50</div>
+        <div class="c mono">▲ 4.82%</div>
+      </div>
+    </div>
+    <div class="tm-tabs">
+      <div class="tm-tab active">График</div>
+      <div class="tm-tab">Глубина</div>
+      <div class="tm-tab">Сделки</div>
+    </div>
+    <div class="tm-chart">
+      <svg viewBox="0 0 480 160" width="100%" height="100%" id="candleSvg"></svg>
+    </div>
+    <div class="tm-body">
+      <div class="tm-book">
+        <div class="t mono">СТАКАН</div>
+        <div id="obAsks"></div>
+        <div id="obBids"></div>
+      </div>
+      <div class="tm-actions">
+        <a href="/auth.html?mode=signup" class="tm-btn buy">Купить / Лонг</a>
+        <a href="/auth.html?mode=signup" class="tm-btn sell">Продать / Шорт</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee-wrap">
+  <div class="marquee-track" id="marqueeTrack"></div>
+</div>
+
+<section class="section" id="markets">
+  <div class="sec-head">
+    <div>
+      <div class="tag reveal">Рынки</div>
+      <h2 class="sec-title reveal">Более 340 торговых пар</h2>
+    </div>
+    <p class="sec-sub reveal">Спот, бессрочные контракты и опционы — глубокая ликвидность по каждой паре.</p>
+  </div>
+  <div class="mtabs reveal">
+    <div class="mtab active">Спот</div>
+    <div class="mtab">Деривативы</div>
+    <div class="mtab">Рост</div>
+  </div>
+  <table class="markets reveal">
+    <thead><tr><th>Актив</th><th>Цена</th><th>24ч</th><th>Объём (24ч)</th><th></th></tr></thead>
+    <tbody id="marketsBody"></tbody>
+  </table>
+</section>
+
+<section class="section" id="features">
+  <div class="sec-head">
+    <div>
+      <div class="tag reveal">Почему ZENTRA</div>
+      <h2 class="sec-title reveal">Сделано для тех, кто торгует всерьёз</h2>
+    </div>
+  </div>
+  <div class="feat-grid reveal">
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8Z"/></svg></div>
+      <h4>Исполнение &lt;10мс</h4>
+      <p>Собственный матчинг-движок держит задержку минимальной даже на пиках волатильности.</p>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6l-8-3Z"/></svg></div>
+      <h4>Резерв активов 1:1</h4>
+      <p>Публичное подтверждение резервов и мультиподписные холодные хранилища.</p>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V10M10 19V5M16 19v-7M22 19V3" stroke-linecap="round"/></svg></div>
+      <h4>Глубокая ликвидность</h4>
+      <p>Узкие спреды по основным парам благодаря пулу институциональных маркет-мейкеров.</p>
+    </div>
+    <div class="feat">
+      <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+      <h4>Поддержка 24/7</h4>
+      <p>Живые операторы на связи каждую минуту, в любом часовом поясе.</p>
+    </div>
+  </div>
+
+  <div class="stats-band reveal" style="margin-top:24px;">
+    <div><div class="n" data-count="38" data-suffix="B+">0</div><div class="l">Суточный объём торгов</div></div>
+    <div><div class="n" data-count="42" data-suffix="M+">0</div><div class="l">Пользователей</div></div>
+    <div><div class="n" data-count="190" data-suffix="+">0</div><div class="l">Стран доступа</div></div>
+    <div><div class="n" data-count="99.99" data-suffix="%">0</div><div class="l">Аптайм платформы</div></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="tag reveal" style="justify-content:center;">Начните за 60 секунд</div>
+  <h2 class="reveal">Ваш аккаунт на ZENTRA<br>уже ждёт вас.</h2>
+  <a href="/auth.html?mode=signup" class="btn-amber lg reveal">Создать аккаунт</a>
+</section>
+
+<footer>
+  <div class="foot-top">
+    <div class="logo"><div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 14l6-6 4 4 6-8"/></svg></div>ZENTRA</div>
+    <div class="foot-cols">
+      <div class="fcol"><h5>Продукты</h5><a href="#">Спот</a><a href="#">Деривативы</a><a href="#">Заработок</a></div>
+      <div class="fcol"><h5>Поддержка</h5><a href="#">Центр помощи</a><a href="#">Комиссии</a><a href="#">Статус системы</a></div>
+      <div class="fcol"><h5>Компания</h5><a href="#">О нас</a><a href="#">Карьера</a><a href="#">Пресс-центр</a></div>
+      <div class="fcol"><h5>Правовое</h5><a href="#">Условия</a><a href="#">Конфиденциальность</a></div>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Zentra Exchange. Демонстрационный проект.</span>
+    <span>Торговля цифровыми активами сопряжена с риском.</span>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>

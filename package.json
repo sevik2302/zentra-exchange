@@ -1,0 +1,18 @@
+{
+  "name": "zentra-exchange",
+  "version": "1.0.0",
+  "description": "Демо-проект биржи цифровых активов ZENTRA — рабочая регистрация/вход, база данных на диске, генерация демо-адресов для депозита.",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "cookie-parser": "^1.4.6"
+  },
+  "license": "MIT"
+}
